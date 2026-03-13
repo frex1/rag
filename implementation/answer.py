@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 # Config 
-MODEL = "gpt-4.1-nano"
+MODEL = "gpt-4.1-mini"
 DB_NAME = str(Path(__file__).parent.parent / "vector_db")
 EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"
 
