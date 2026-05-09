@@ -2,33 +2,29 @@
 
 ## Introduction
 
-This is based off the InsureLLM project from Week 5 of the course.
+This project explores Retrieval-Augmented Generation (RAG) using an extended knowledge base inspired by a fictional insurance company, InsureLLM.
 
-The data in knowledge-base is an extended version of the knowledge base from week 5 of the fictional company, InsureLLM.
+## Project Structure
 
-## How this is organized
+**Root directory:**
 
-In the root directory:
+- `uv run ingest.py` (from `implementation/`): Ingest the latest knowledge base data.
+- `uv run app.py`: Run the Q&A Chatbot for interactive conversations.
+- `uv run evaluator.py`: Evaluate chatbot performance using the available evaluation scripts.
 
-[lab.ipynb](lab.ipynb) is a walk-through notebook  
-`cd implementation` and then `uv run ingest.py` to ingest data  
-From project root, `uv run app.py` to run the Q&A Chatbot  
-From project root, `uv run evaluator.py` to run the evaluation  
+**implementation directory:**
 
-In the implementation directory:
+- `answer.py`: Handles question answering. Customize or enhance `fetch_context()` and `answer_question()` as you see fit!
+- `ingest.py`: Responsible for ingestion and preprocessing of the knowledge base. This is fully open to your improvements and ideas.
 
-[answer.py](implementation/answer.py) is the module that answers a user's question. You can change or rewrite `fetch_context()` and `answer_question()`
+**evaluation directory:**
 
-[ingest.py](implementation/ingest.py) is the module that loads in the data. You can change any of this!
+- Contains scripts for automated evaluation on test data (do not modify for consistency in evaluation).
 
-In the evaluation directory:
+## Objective
 
-Private code that runs the evaluation on test data. Don't change this!
-
-## Your mission
-
-1. Work through the lab to understand the current state and ingest data  
-2. Reimplement `ingest.py` and `answer.py` with your ideas  
-3. Beat Ed and beat the other teams!  
+- Understand the project structure and current implementation.
+- Re-implement or improve on `ingest.py` and `answer.py` with your approaches.
+- Strive for the most effective, high-performing Q&A chatbot!
 
 Good luck!
